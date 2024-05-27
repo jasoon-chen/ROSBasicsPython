@@ -1,0 +1,1 @@
+/home/user/catkin_ws/src/exercise_pkg/devel/.private/catkin_tools_prebuild/env.sh

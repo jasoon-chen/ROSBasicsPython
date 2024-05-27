@@ -1,0 +1,2 @@
+my_package
+-DCATKIN_DEVEL_PREFIX=/home/user/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/user/catkin_ws/install -DCATKIN_WHITELIST_PACKAGES=my_package -G Unix Makefiles
