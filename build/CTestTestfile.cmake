@@ -5,6 +5,8 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("services_quiz")
+subdirs("bb8_custom_service_message")
 subdirs("exercise_pkg")
 subdirs("my_custom_srv_msg_pkg")
 subdirs("my_package")

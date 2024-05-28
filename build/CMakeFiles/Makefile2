@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/user/catkin_ws/build
 
 # The main recursive "all" target.
 all: gtest/all
+all: services_quiz/all
+all: bb8_custom_service_message/all
 all: exercise_pkg/all
 all: my_custom_srv_msg_pkg/all
 all: my_package/all
@@ -69,6 +71,8 @@ all: unit_7_server/all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
+preinstall: services_quiz/preinstall
+preinstall: bb8_custom_service_message/preinstall
 preinstall: exercise_pkg/preinstall
 preinstall: my_custom_srv_msg_pkg/preinstall
 preinstall: my_package/preinstall
@@ -89,6 +93,8 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
+clean: services_quiz/clean
+clean: bb8_custom_service_message/clean
 clean: exercise_pkg/clean
 clean: my_custom_srv_msg_pkg/clean
 clean: my_package/clean
@@ -101,6 +107,40 @@ clean: unit_5_services/clean
 clean: unit_7_server/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory bb8_custom_service_message
+
+# Recursive "all" directory target.
+bb8_custom_service_message/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/all
+
+.PHONY : bb8_custom_service_message/all
+
+# Recursive "preinstall" directory target.
+bb8_custom_service_message/preinstall:
+
+.PHONY : bb8_custom_service_message/preinstall
+
+# Recursive "clean" directory target.
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/clean
+bb8_custom_service_message/clean: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/clean
+
+.PHONY : bb8_custom_service_message/clean
 
 #=============================================================================
 # Directory level rules for directory exercise_pkg
@@ -116,11 +156,7 @@ exercise_pkg/preinstall:
 .PHONY : exercise_pkg/preinstall
 
 # Recursive "clean" directory target.
-exercise_pkg/clean: exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-exercise_pkg/clean: exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-exercise_pkg/clean: exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-exercise_pkg/clean: exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-exercise_pkg/clean: exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+exercise_pkg/clean:
 
 .PHONY : exercise_pkg/clean
 
@@ -224,7 +260,7 @@ my_package/preinstall:
 .PHONY : my_package/preinstall
 
 # Recursive "clean" directory target.
-my_package/clean: my_package/CMakeFiles/_catkin_empty_exported_target.dir/clean
+my_package/clean:
 
 .PHONY : my_package/clean
 
@@ -310,6 +346,24 @@ my_subscriber_example_pkg/clean: my_subscriber_example_pkg/CMakeFiles/my_subscri
 my_subscriber_example_pkg/clean: my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_genpy.dir/clean
 
 .PHONY : my_subscriber_example_pkg/clean
+
+#=============================================================================
+# Directory level rules for directory services_quiz
+
+# Recursive "all" directory target.
+services_quiz/all:
+
+.PHONY : services_quiz/all
+
+# Recursive "preinstall" directory target.
+services_quiz/preinstall:
+
+.PHONY : services_quiz/preinstall
+
+# Recursive "clean" directory target.
+services_quiz/clean: services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : services_quiz/clean
 
 #=============================================================================
 # Directory level rules for directory topics_quiz
@@ -542,7 +596,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=3,4 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=10,11 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -569,7 +623,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=1,2 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=8,9 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -596,7 +650,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=7,8 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=14,15 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -623,7 +677,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=5,6 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=12,13 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -644,139 +698,499 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
-# Target rules for target exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir
+# Target rules for target services_quiz/CMakeFiles/_catkin_empty_exported_target.dir
 
 # All Build rule for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
+services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/build.make services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/build.make services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+.PHONY : services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_py: exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+_catkin_empty_exported_target: services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
-.PHONY : std_msgs_generate_messages_py
+.PHONY : _catkin_empty_exported_target
 
 # clean rule for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/build.make services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : services_quiz/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
-# Target rules for target exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir
 
 # All Build rule for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target bb8_custom_service_message_genpy"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/all
 
 # Build rule for subdir invocation for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_nodejs: exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+bb8_custom_service_message_genpy: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/rule
 
-.PHONY : std_msgs_generate_messages_nodejs
+.PHONY : bb8_custom_service_message_genpy
 
 # clean rule for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genpy.dir/clean
 
 #=============================================================================
-# Target rules for target exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir
 
 # All Build rule for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/all: bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=6,7 "Built target bb8_custom_service_message_generate_messages_py"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_lisp: exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+bb8_custom_service_message_generate_messages_py: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/rule
 
-.PHONY : std_msgs_generate_messages_lisp
+.PHONY : bb8_custom_service_message_generate_messages_py
 
 # clean rule for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir
 
 # All Build rule for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target bb8_custom_service_message_gennodejs"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/all
 
 # Build rule for subdir invocation for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_eus: exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+bb8_custom_service_message_gennodejs: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/rule
 
-.PHONY : std_msgs_generate_messages_eus
+.PHONY : bb8_custom_service_message_gennodejs
 
 # clean rule for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gennodejs.dir/clean
 
 #=============================================================================
-# Target rules for target exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir
 
 # All Build rule for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/all: bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=5 "Built target bb8_custom_service_message_generate_messages_nodejs"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+bb8_custom_service_message_generate_messages_nodejs: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/rule
+
+.PHONY : bb8_custom_service_message_generate_messages_nodejs
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_cpp: exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+std_msgs_generate_messages_cpp: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 .PHONY : std_msgs_generate_messages_cpp
 
 # clean rule for target.
-exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-.PHONY : exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target bb8_custom_service_message_geneus"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/rule
+
+# Convenience name for target.
+bb8_custom_service_message_geneus: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/rule
+
+.PHONY : bb8_custom_service_message_geneus
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_geneus.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_py.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_nodejs.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target bb8_custom_service_message_generate_messages"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/rule
+
+# Convenience name for target.
+bb8_custom_service_message_generate_messages: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/rule
+
+.PHONY : bb8_custom_service_message_generate_messages
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+.PHONY : std_msgs_generate_messages_py
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/all:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/build.make bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/build.make bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target _bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage"
+.PHONY : bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/rule
+
+# Convenience name for target.
+_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage: bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/rule
+
+.PHONY : _bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/build.make bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/all: bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=1 "Built target bb8_custom_service_message_generate_messages_cpp"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+bb8_custom_service_message_generate_messages_cpp: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/rule
+
+.PHONY : bb8_custom_service_message_generate_messages_cpp
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_cpp.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target bb8_custom_service_message_gencpp"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/rule
+
+# Convenience name for target.
+bb8_custom_service_message_gencpp: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/rule
+
+.PHONY : bb8_custom_service_message_gencpp
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_gencpp.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/all: bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=4 "Built target bb8_custom_service_message_generate_messages_lisp"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+bb8_custom_service_message_generate_messages_lisp: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/rule
+
+.PHONY : bb8_custom_service_message_generate_messages_lisp
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/all: bb8_custom_service_message/CMakeFiles/_bb8_custom_service_message_generate_messages_check_deps_BB8CustomServiceMessage.dir/all
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=2,3 "Built target bb8_custom_service_message_generate_messages_eus"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+bb8_custom_service_message_generate_messages_eus: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/rule
+
+.PHONY : bb8_custom_service_message_generate_messages_eus
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir
+
+# All Build rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/all: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_generate_messages_lisp.dir/all
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/depend
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target bb8_custom_service_message_genlisp"
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/all
+
+# Build rule for subdir invocation for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/rule
+
+# Convenience name for target.
+bb8_custom_service_message_genlisp: bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/rule
+
+.PHONY : bb8_custom_service_message_genlisp
+
+# clean rule for target.
+bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/clean:
+	$(MAKE) -f bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/build.make bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/clean
+.PHONY : bb8_custom_service_message/CMakeFiles/bb8_custom_service_message_genlisp.dir/clean
 
 #=============================================================================
 # Target rules for target my_custom_srv_msg_pkg/CMakeFiles/_my_custom_srv_msg_pkg_generate_messages_check_deps_MyCustomServiceMessage.dir
@@ -836,11 +1250,11 @@ my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_geneus.dir/clean:
 # Target rules for target my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_cpp.dir
 
 # All Build rule for target.
-my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_cpp.dir/all: exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_cpp.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_cpp.dir/all: my_custom_srv_msg_pkg/CMakeFiles/_my_custom_srv_msg_pkg_generate_messages_check_deps_MyCustomServiceMessage.dir/all
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_cpp.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_cpp.dir/depend
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_cpp.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=9 "Built target my_custom_srv_msg_pkg_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=16 "Built target my_custom_srv_msg_pkg_generate_messages_cpp"
 .PHONY : my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -864,11 +1278,11 @@ my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_cpp.dir
 # Target rules for target my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_eus.dir
 
 # All Build rule for target.
-my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_eus.dir/all: exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_eus.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_eus.dir/all: my_custom_srv_msg_pkg/CMakeFiles/_my_custom_srv_msg_pkg_generate_messages_check_deps_MyCustomServiceMessage.dir/all
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_eus.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_eus.dir/depend
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_eus.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=10,11 "Built target my_custom_srv_msg_pkg_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=17,18 "Built target my_custom_srv_msg_pkg_generate_messages_eus"
 .PHONY : my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -919,11 +1333,11 @@ my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_gencpp.dir/clean:
 # Target rules for target my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_lisp.dir
 
 # All Build rule for target.
-my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_lisp.dir/all: exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_lisp.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_lisp.dir/all: my_custom_srv_msg_pkg/CMakeFiles/_my_custom_srv_msg_pkg_generate_messages_check_deps_MyCustomServiceMessage.dir/all
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_lisp.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_lisp.dir/depend
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_lisp.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=12 "Built target my_custom_srv_msg_pkg_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=19 "Built target my_custom_srv_msg_pkg_generate_messages_lisp"
 .PHONY : my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -974,11 +1388,11 @@ my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_genlisp.dir/clean:
 # Target rules for target my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_nodejs.dir
 
 # All Build rule for target.
-my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_nodejs.dir/all: exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_nodejs.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_nodejs.dir/all: my_custom_srv_msg_pkg/CMakeFiles/_my_custom_srv_msg_pkg_generate_messages_check_deps_MyCustomServiceMessage.dir/all
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_nodejs.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_nodejs.dir/depend
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_nodejs.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=13 "Built target my_custom_srv_msg_pkg_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=20 "Built target my_custom_srv_msg_pkg_generate_messages_nodejs"
 .PHONY : my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1087,11 +1501,11 @@ my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_genpy.dir/clean:
 # Target rules for target my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir
 
 # All Build rule for target.
-my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/all: exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
+my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/all
 my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/all: my_custom_srv_msg_pkg/CMakeFiles/_my_custom_srv_msg_pkg_generate_messages_check_deps_MyCustomServiceMessage.dir/all
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/depend
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=14,15 "Built target my_custom_srv_msg_pkg_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=21,22 "Built target my_custom_srv_msg_pkg_generate_messages_py"
 .PHONY : my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1110,33 +1524,6 @@ my_custom_srv_msg_pkg_generate_messages_py: my_custom_srv_msg_pkg/CMakeFiles/my_
 my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/clean:
 	$(MAKE) -f my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/build.make my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/clean
 .PHONY : my_custom_srv_msg_pkg/CMakeFiles/my_custom_srv_msg_pkg_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target my_package/CMakeFiles/_catkin_empty_exported_target.dir
-
-# All Build rule for target.
-my_package/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f my_package/CMakeFiles/_catkin_empty_exported_target.dir/build.make my_package/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f my_package/CMakeFiles/_catkin_empty_exported_target.dir/build.make my_package/CMakeFiles/_catkin_empty_exported_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : my_package/CMakeFiles/_catkin_empty_exported_target.dir/all
-
-# Build rule for subdir invocation for target.
-my_package/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 my_package/CMakeFiles/_catkin_empty_exported_target.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/catkin_ws/build/CMakeFiles 0
-.PHONY : my_package/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: my_package/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# clean rule for target.
-my_package/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f my_package/CMakeFiles/_catkin_empty_exported_target.dir/build.make my_package/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : my_package/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
 # Target rules for target my_subscriber_example_pkg/CMakeFiles/_my_subscriber_example_pkg_generate_messages_check_deps_Age.dir
@@ -1200,11 +1587,11 @@ my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages
 # Target rules for target my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_nodejs.dir
 
 # All Build rule for target.
-my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_nodejs.dir/all: exercise_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_nodejs.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_nodejs.dir/all: my_subscriber_example_pkg/CMakeFiles/_my_subscriber_example_pkg_generate_messages_check_deps_Age.dir/all
 	$(MAKE) -f my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_nodejs.dir/build.make my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_nodejs.dir/depend
 	$(MAKE) -f my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_nodejs.dir/build.make my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=20 "Built target my_subscriber_example_pkg_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=27 "Built target my_subscriber_example_pkg_generate_messages_nodejs"
 .PHONY : my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1228,11 +1615,11 @@ my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages
 # Target rules for target my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_cpp.dir
 
 # All Build rule for target.
-my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_cpp.dir/all: exercise_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_cpp.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_cpp.dir/all: my_subscriber_example_pkg/CMakeFiles/_my_subscriber_example_pkg_generate_messages_check_deps_Age.dir/all
 	$(MAKE) -f my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_cpp.dir/build.make my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_cpp.dir/depend
 	$(MAKE) -f my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_cpp.dir/build.make my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=16 "Built target my_subscriber_example_pkg_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=23 "Built target my_subscriber_example_pkg_generate_messages_cpp"
 .PHONY : my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1283,11 +1670,11 @@ my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_gencpp.dir/clean:
 # Target rules for target my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_py.dir
 
 # All Build rule for target.
-my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_py.dir/all: exercise_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
+my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_py.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_py.dir/all
 my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_py.dir/all: my_subscriber_example_pkg/CMakeFiles/_my_subscriber_example_pkg_generate_messages_check_deps_Age.dir/all
 	$(MAKE) -f my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_py.dir/build.make my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_py.dir/depend
 	$(MAKE) -f my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_py.dir/build.make my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=21,22 "Built target my_subscriber_example_pkg_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=28,29 "Built target my_subscriber_example_pkg_generate_messages_py"
 .PHONY : my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1338,11 +1725,11 @@ my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_geneus.dir/clean:
 # Target rules for target my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_eus.dir
 
 # All Build rule for target.
-my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_eus.dir/all: exercise_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_eus.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_eus.dir/all: my_subscriber_example_pkg/CMakeFiles/_my_subscriber_example_pkg_generate_messages_check_deps_Age.dir/all
 	$(MAKE) -f my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_eus.dir/build.make my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_eus.dir/depend
 	$(MAKE) -f my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_eus.dir/build.make my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=17,18 "Built target my_subscriber_example_pkg_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=24,25 "Built target my_subscriber_example_pkg_generate_messages_eus"
 .PHONY : my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1366,11 +1753,11 @@ my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages
 # Target rules for target my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_lisp.dir
 
 # All Build rule for target.
-my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_lisp.dir/all: exercise_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_lisp.dir/all: bb8_custom_service_message/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_lisp.dir/all: my_subscriber_example_pkg/CMakeFiles/_my_subscriber_example_pkg_generate_messages_check_deps_Age.dir/all
 	$(MAKE) -f my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_lisp.dir/build.make my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_lisp.dir/depend
 	$(MAKE) -f my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_lisp.dir/build.make my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=19 "Built target my_subscriber_example_pkg_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/catkin_ws/build/CMakeFiles --progress-num=26 "Built target my_subscriber_example_pkg_generate_messages_lisp"
 .PHONY : my_subscriber_example_pkg/CMakeFiles/my_subscriber_example_pkg_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
