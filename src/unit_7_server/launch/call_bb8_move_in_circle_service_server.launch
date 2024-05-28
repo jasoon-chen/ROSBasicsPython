@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="unit_7_server" name="bb8_move_service_client" type="bb8_move_in_circle_service_client.py" output="screen"></node>
+</launch>
