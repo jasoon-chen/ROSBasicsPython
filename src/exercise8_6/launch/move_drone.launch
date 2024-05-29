@@ -1,0 +1,4 @@
+
+<launch>
+    <node pkg="exercise8_6" type="ardrone_action_client.py" name="exercise_8_6_action_server_node" output="screen" />
+</launch>

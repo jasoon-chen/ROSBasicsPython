@@ -52,8 +52,9 @@ def turn():
     
     return not rospy.is_shutdown()
 
-rospy.init_node('move_bb8_in_square_custom_server')
-service = rospy.Service("/move_bb8_in_square_custom", BB8CustomServiceMessage, cb)
-pub = rospy.Publisher("/cmd_vel", Twist, queue_size=10)
-move = Twist()
-rospy.spin()
+if __name__ == "__main__":
+    rospy.init_node('move_bb8_in_square_custom_server')
+    service = rospy.Service("/move_bb8_in_square_custom", BB8CustomServiceMessage, cb)
+    pub = rospy.Publisher("/cmd_vel", Twist, queue_size=10)
+    move = Twist()
+    rospy.spin()

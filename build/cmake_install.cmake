@@ -132,17 +132,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/user/catkin_ws/build/gtest/cmake_install.cmake")
   include("/home/user/catkin_ws/build/services_quiz/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/bb8_custom_service_message/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/exercise_pkg/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/my_custom_srv_msg_pkg/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/my_package/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/my_publisher_example_pkg/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/my_service_client_example_pkg/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/my_service_server_example_pkg/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/my_subscriber_example_pkg/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/topics_quiz/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/unit_5_services/cmake_install.cmake")
-  include("/home/user/catkin_ws/build/unit_7_server/cmake_install.cmake")
 
 endif()
 
