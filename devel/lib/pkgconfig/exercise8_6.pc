@@ -1,0 +1,8 @@
+prefix=/home/user/catkin_ws/devel
+
+Name: exercise8_6
+Description: Description of exercise8_6
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

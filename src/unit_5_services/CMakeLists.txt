@@ -8,7 +8,7 @@ project(unit_5_services)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  iri_wam_reproduce_trajectory
+#   iri_wam_reproduce_trajectory
   rospy
   std_msgs
 )

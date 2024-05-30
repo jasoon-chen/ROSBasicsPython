@@ -37,7 +37,7 @@ CATKIN_SKIP_TESTING:BOOL=OFF
 CATKIN_SYMLINK_INSTALL:BOOL=OFF
 
 //List of ';' separated packages to build
-CATKIN_WHITELIST_PACKAGES:STRING=services_quiz
+CATKIN_WHITELIST_PACKAGES:STRING=actions_quiz
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -359,7 +359,7 @@ RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 
 //Name of the computer/site where compile is being run
-SITE:STRING=2_xterm
+SITE:STRING=1_xterm
 
 //LSB Distrib tag
 UBUNTU:BOOL=TRUE
@@ -379,11 +379,14 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 //Path to a file.
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 
-//The directory containing a CMake configuration file for actionlib.
-actionlib_DIR:PATH=/opt/ros/noetic/share/actionlib/cmake
-
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/noetic/share/actionlib_msgs/cmake
+
+//Value Computed by CMake
+actions_quiz_BINARY_DIR:STATIC=/home/user/catkin_ws/build/actions_quiz
+
+//Value Computed by CMake
+actions_quiz_SOURCE_DIR:STATIC=/home/user/catkin_ws/src/actions_quiz
 
 //Value Computed by CMake
 bb8_custom_service_message_BINARY_DIR:STATIC=/home/user/catkin_ws/build/bb8_custom_service_message
@@ -396,6 +399,18 @@ catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
+
+//Value Computed by CMake
+exercise8_6_BINARY_DIR:STATIC=/home/user/catkin_ws/build/exercise8_6
+
+//Value Computed by CMake
+exercise8_6_SOURCE_DIR:STATIC=/home/user/catkin_ws/src/exercise8_6
+
+//Value Computed by CMake
+exercise9_13_BINARY_DIR:STATIC=/home/user/catkin_ws/build/exercise9_13
+
+//Value Computed by CMake
+exercise9_13_SOURCE_DIR:STATIC=/home/user/catkin_ws/src/exercise9_13
 
 //Value Computed by CMake
 exercise_pkg_BINARY_DIR:STATIC=/home/user/catkin_ws/build/exercise_pkg
@@ -420,9 +435,6 @@ gennodejs_DIR:PATH=/opt/ros/noetic/share/gennodejs/cmake
 
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/noetic/share/genpy/cmake
-
-//The directory containing a CMake configuration file for geometry_msgs.
-geometry_msgs_DIR:PATH=/opt/ros/noetic/share/geometry_msgs/cmake
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/user/catkin_ws/build/gtest/googlemock
@@ -471,7 +483,7 @@ gtest_hide_internal_symbols:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //The directory containing a CMake configuration file for iri_wam_reproduce_trajectory.
-iri_wam_reproduce_trajectory_DIR:PATH=/home/simulations/public_sim_ws/devel/share/iri_wam_reproduce_trajectory/cmake
+iri_wam_reproduce_trajectory_DIR:PATH=iri_wam_reproduce_trajectory_DIR-NOTFOUND
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/librostime.so
@@ -481,6 +493,18 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
+
+//Value Computed by CMake
+my_action_client_example_pkg_BINARY_DIR:STATIC=/home/user/catkin_ws/build/my_action_client_example_pkg
+
+//Value Computed by CMake
+my_action_client_example_pkg_SOURCE_DIR:STATIC=/home/user/catkin_ws/src/my_action_client_example_pkg
+
+//Value Computed by CMake
+my_action_server_example_pkg_BINARY_DIR:STATIC=/home/user/catkin_ws/build/my_action_server_example_pkg
+
+//Value Computed by CMake
+my_action_server_example_pkg_SOURCE_DIR:STATIC=/home/user/catkin_ws/src/my_action_server_example_pkg
 
 //Value Computed by CMake
 my_custom_srv_msg_pkg_BINARY_DIR:STATIC=/home/user/catkin_ws/build/my_custom_srv_msg_pkg
@@ -518,20 +542,11 @@ my_subscriber_example_pkg_BINARY_DIR:STATIC=/home/user/catkin_ws/build/my_subscr
 //Value Computed by CMake
 my_subscriber_example_pkg_SOURCE_DIR:STATIC=/home/user/catkin_ws/src/my_subscriber_example_pkg
 
-//The directory containing a CMake configuration file for rosconsole.
-rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
-
-//The directory containing a CMake configuration file for roscpp.
-roscpp_DIR:PATH=/opt/ros/noetic/share/roscpp/cmake
-
 //The directory containing a CMake configuration file for roscpp_serialization.
 roscpp_serialization_DIR:PATH=/opt/ros/noetic/share/roscpp_serialization/cmake
 
 //The directory containing a CMake configuration file for roscpp_traits.
 roscpp_traits_DIR:PATH=/opt/ros/noetic/share/roscpp_traits/cmake
-
-//The directory containing a CMake configuration file for rosgraph_msgs.
-rosgraph_msgs_DIR:PATH=/opt/ros/noetic/share/rosgraph_msgs/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
@@ -554,9 +569,6 @@ topics_quiz_BINARY_DIR:STATIC=/home/user/catkin_ws/build/topics_quiz
 //Value Computed by CMake
 topics_quiz_SOURCE_DIR:STATIC=/home/user/catkin_ws/src/topics_quiz
 
-//The directory containing a CMake configuration file for trajectory_msgs.
-trajectory_msgs_DIR:PATH=/opt/ros/noetic/share/trajectory_msgs/cmake
-
 //Value Computed by CMake
 unit_5_services_BINARY_DIR:STATIC=/home/user/catkin_ws/build/unit_5_services
 
@@ -568,9 +580,6 @@ unit_7_server_BINARY_DIR:STATIC=/home/user/catkin_ws/build/unit_7_server
 
 //Value Computed by CMake
 unit_7_server_SOURCE_DIR:STATIC=/home/user/catkin_ws/src/unit_7_server
-
-//The directory containing a CMake configuration file for xmlrpcpp.
-xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 
 
 ########################
