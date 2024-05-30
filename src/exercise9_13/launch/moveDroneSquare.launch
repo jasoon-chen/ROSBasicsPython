@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="exercise9_13" type="moveDroneSquare.py" name="movedronesquare_node"  output="screen">
+    </node>
+</launch>

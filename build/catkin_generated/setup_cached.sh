@@ -8,4 +8,3 @@
 
 # modified environment variables
 export PWD='/home/user/catkin_ws/build'
-export ROS_PACKAGE_PATH='/home/user/catkin_ws/src:/home/simulations/public_sim_ws/src:/opt/ros/noetic/share'
