@@ -43,5 +43,31 @@ result = move_client(move_request)
 
 When you type rosservice call `/your_service_name_here [TAB]+[TAB]` and you don't get anything, this means that you are custom SRV message is not compiled. Try running `source devel/setup.bash` to solve the problem.
 
+# 10 - Understanding ROS Actions - Servers
+While this lesson is really clear in how you can make your own Action Server and utilizing Action Client, I think it lacks clarity in some of the important aspects you need for a Action Server.
+1. Make sure when you are connecting to a publisher, you ensure that you wait until you are fully connected to the Publisher. There seems to be long latency between when you write `rospy.Publisher(...)` to when you actually connect to the publisher. One way that I have been using to fix this issue is to do
+```py
+while self._pubTakeOff.get_num_connections() < 1:
+            pass
+```
+This makes sure that the the publisher has at least one connection. I'm not sure if this would work in real world environment or industry, but this is the way that I have found that works the best.
+
+2. Make sure you check whether the user has decided to cancel the action. If you do not check for this, the action will just run until it finishes. One way that you can check for this is:
+```py
+if self._actionServer.is_preempt_requested():
+                rospy.loginfo("Moving Drone In a Square has been requested to be cancelled")
+                self._actionServer.set_preempted()
+                success = False
+                break
+```
+This checks if the actionServer has been cancelled by the user, if so then you need to make sure you do any necessary cleanup code to finish the Action. 
+
+3. Make sure you also remember to publish your feedback message. This is important so that the client is able to retrieve any necessary information from the server. 
+```py
+self._feedback.feedback = x # Your information here
+self._actionServer.publish_feedback(self._feedback)
+```
+
+4. Ultimately, make sure that once your action is successful you set the action as succeeded through `self._actionServer.set_succeeded(TestResult())`
 # Side Notes
 When you create a new package, it seems like best practice is to run `catkin_make` or `catkin build` whichever one your ROS is setup to use. For this course, `catkin_make` is typically used. Now, you only need to do this to one shell for the entire ROS. But you also need to make sure you run `source devel/setup.bash` in __**EACH**__ shell. Not sure why but it seems to be said so [here](https://get-help.theconstruct.ai/t/error-cannot-load-message-class-for-package-message-are-your-messages-built/55)
