@@ -1,6 +1,9 @@
 # ROS Basics in 5 Days (Python)
 This is to help people self learn ROS through [The Construct](https://www.theconstruct.ai/). Even though all of the tutorials and lessons are already on the website, this repository is meant to upload all of my solutions and also some hints while working through the project as some of them may not be clear. Feel free to create a github pull request or issue if you want to add onto this repository.
 
+# Status
+I have completed this course which means that this reposistory will be up to date as of 5/30/2024. If you would like to update any information feel free to make a pull request. I will be continuing my journey thorugh the other courses.
+
 # 4 - Understanding ROS Topics - Publishers
 For Exercise 3.1, it is recommended that you read the documentation for what a Twist message is. https://docs.ros.org/en/noetic/api/geometry_msgs/html/msg/Twist.html The `Twist Message` has 2 instance members within itself which are both `geometry_msgs/Vector3 linear` and `geometry_msgs/Vector3 angular`. `Vector3` has instance variables of x, y, and z which are all float64. I am not 100% sure, however I'm pretty sure that the conventional coordinate system used on the Twist Message is Euler. For different coordinate systems, I'm not too sure how would be able to specific it. Possibly you would create your own SRV Message? For the Twist Message, the table below describes how you can interpret each of the components:
 
