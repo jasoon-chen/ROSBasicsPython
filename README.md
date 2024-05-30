@@ -69,5 +69,37 @@ self._actionServer.publish_feedback(self._feedback)
 ```
 
 4. Ultimately, make sure that once your action is successful you set the action as succeeded through `self._actionServer.set_succeeded(TestResult())`
+
+The code below is an example that combines all of the steps above to create a sophisticated ActionServer. The entire class has purposely not been defined here, instead this is just to show the structure of a ActionServer.
+```py
+def cb(self, goal):
+        rospy.loginfo("Action Server Called")
+        success = True
+        rate = rospy.Rate(1)
+        
+        # Example of Checking if a Publisher is connected
+        while self._pubTakeOff.get_num_connections() < 1:
+            pass
+        self._pubTakeOff.publish(Empty())
+        rate.sleep()
+
+        # Check if the Action has been requested to be Cancelled
+        if self._actionServer.is_preempt_requested():
+            rospy.loginfo("Moving Drone In a Square has been requested to be cancelled")
+            self._actionServer.set_preempted()
+            success = False
+            break
+
+        # Publish the feedback message
+        self._feedback.feedback = x
+        self._actionServer.publish_feedback(self._feedback)
+        rate.sleep()
+        
+        # Action is Successful
+        if success:
+            self._actionServer.set_succeeded(TestResult())
+        self.stop()
+        rospy.loginfo("Action is Successful")
+```
 # Side Notes
 When you create a new package, it seems like best practice is to run `catkin_make` or `catkin build` whichever one your ROS is setup to use. For this course, `catkin_make` is typically used. Now, you only need to do this to one shell for the entire ROS. But you also need to make sure you run `source devel/setup.bash` in __**EACH**__ shell. Not sure why but it seems to be said so [here](https://get-help.theconstruct.ai/t/error-cannot-load-message-class-for-package-message-are-your-messages-built/55)
