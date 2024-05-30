@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="my_log_print_example" type="logger_example.py" name="log_demo"  output="screen">
+    </node>
+</launch>
